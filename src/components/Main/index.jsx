@@ -3,8 +3,9 @@ import { EmptyCart } from "../EmptyCart";
 import { ProductList } from "../ProductList";
 import { Button } from "../Button";
 import { TotalValue } from "../TotalValue";
-import { StyledMain } from "./style";
+import { StyledMain, StyledSearched } from "./style";
 import { StyledContainer } from "../../styles/container";
+import { StyledEmptyListTitle } from "../EmptyCart/style";
 
 export const Main = ({
   search,
@@ -14,16 +15,19 @@ export const Main = ({
   removeProductFromCart,
   totalValue,
   setSearch,
+  removeAllProducts,
 }) => {
   return (
     <StyledContainer>
       <StyledMain>
         <section>
           {search && (
-            <div>
-              <h1>Resultados para: {search}</h1>
+            <StyledSearched>
+              <h1>
+                Resultados para: <span>{search}</span>
+              </h1>
               <Button action={() => setSearch("")}>Limpar busca</Button>
-            </div>
+            </StyledSearched>
           )}
           <ProductList
             searchProducts={searchProducts}
@@ -41,7 +45,10 @@ export const Main = ({
                   productCart={productCart}
                   removeProductFromCart={removeProductFromCart}
                 />
-                <TotalValue totalValue={totalValue} />
+                <TotalValue
+                  totalValue={totalValue}
+                  removeAllProducts={removeAllProducts}
+                />
               </>
             )}
           </>

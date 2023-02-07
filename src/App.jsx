@@ -51,6 +51,11 @@ function App() {
     setProductCart(newProductCart);
   };
 
+  const removeAllProducts = (id) => {
+    const newProduct = productCart.filter((product) => product.id === id);
+    setProductCart(newProduct);
+  };
+
   const totalValue = productCart.reduce(
     (previusValue, currentValue) => previusValue + currentValue.price,
     0
@@ -67,6 +72,7 @@ function App() {
         removeProductFromCart={removeProductFromCart}
         totalValue={totalValue}
         setSearch={setSearch}
+        removeAllProducts={removeAllProducts}
       />
       <ToastContainer
         position="bottom-right"

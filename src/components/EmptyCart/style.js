@@ -56,7 +56,7 @@ export const StyledEmptyList = styled.div`
   }
 
   @media (min-width: 1041px) {
-    min-width: 360px;
-    max-width: 360px;
+    min-width: 385px;
+    max-width: 385px;
   }
 `;

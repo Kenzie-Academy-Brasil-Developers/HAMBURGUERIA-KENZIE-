@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   background: #f5f5f5;
-  padding-left: 1rem;
-  padding-right: 1rem;
   padding-top: 1.75rem;
   padding-bottom: 0.75rem;
 
@@ -80,11 +78,11 @@ export const StyledHeader = styled.header`
     }
 
     form {
-      max-width: 365px;
+      max-width: 385px;
     }
 
     div {
-      max-width: 365px;
+      max-width: 385px;
     }
   }
 

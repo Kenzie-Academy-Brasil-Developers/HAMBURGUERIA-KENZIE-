@@ -5,7 +5,6 @@ export const StyledProductList = styled.ul`
   overflow-x: scroll;
   margin-top: 1rem;
   gap: 1rem;
-  padding-right: 1rem;
 
   @media (min-width: 1041px) {
     flex-wrap: wrap;

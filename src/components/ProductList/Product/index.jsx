@@ -11,7 +11,12 @@ export const Product = ({ searchProducts, addProductToCart }) => {
           </div>
           <h2>{product.name}</h2>
           <p>{product.category}</p>
-          <span>R$ {product.price} </span>
+          <span>
+            {product.price.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </span>
           <Button action={() => addProductToCart(product)}>Adicionar</Button>
         </StyledProduct>
       ))}

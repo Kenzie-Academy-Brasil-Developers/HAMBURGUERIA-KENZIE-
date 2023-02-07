@@ -6,7 +6,7 @@ export const StyledProduct = styled.li`
   align-items: flex-start;
 
   width: 300px;
-  min-width: 300px;
+  min-width: 238px;
   height: 346px;
 
   border: 2px solid #e0e0e0;
