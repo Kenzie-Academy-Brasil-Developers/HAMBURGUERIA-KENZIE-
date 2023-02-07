@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const StyledMain = styled.main`
+  section {
+    width: 100%;
+  }
+
   @media (min-width: 1041px) {
     display: flex;
     justify-content: space-between;
@@ -19,6 +23,7 @@ export const StyledSearched = styled.div`
   justify-content: space-between;
   margin-top: 2rem;
   align-items: center;
+  position: relative;
 
   h1 {
     font-style: normal;
@@ -39,13 +44,28 @@ export const StyledSearched = styled.div`
   }
 
   button {
-    min-width: 107px;
-    margin-right: 0.5rem;
+    position: unset;
+    min-width: 110px;
   }
 
   @media (min-width: 1041px) {
     button {
-      margin-right: 4.5rem;
+      display: flex;
+      position: absolute;
+      right: 4.6rem;
+      top: 1px;
+      width: 100%;
+      max-width: 137px;
+
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   }
 `;
